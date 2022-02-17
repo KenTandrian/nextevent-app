@@ -53,8 +53,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Dependencies
 [![react](https://img.shields.io/github/package-json/dependency-version/KenTandrian/nextevents-app/react)](https://www.npmjs.com/package/react)
-[![react-dom](https://img.shields.io/github/package-json/dependency-version/KenTandrian/nextevents-app/react-dom)](https://www.npmjs.com/package/react-dom)
 [![next](https://img.shields.io/github/package-json/dependency-version/KenTandrian/nextevents-app/next)](https://www.npmjs.com/package/next)
+[![eslint](https://img.shields.io/github/package-json/dependency-version/KenTandrian/nextevents-app/dev/eslint)](https://www.npmjs.com/package/eslint)
 
 [Go to List of Dependencies](https://github.com/KenTandrian/nextevents-app/network/dependencies)
 
