@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import Head from "next/head";
 
 // import { getFilteredEvents } from "../../helpers/api-util";
 
@@ -31,9 +32,21 @@ const FilteredEventsPage = () => {
             setLoadedEvents(events);
         }
     }, [data]);
+
+    let pageHeadData = (
+        <Head>
+            <title>Filtered Events</title>
+            <meta name='description' content='A list of Filtered Events' />
+        </Head>
+    );
     
     if (!loadedEvents) {
-        return <p className="center">Loading...</p>;
+        return (
+            <Fragment>
+                {pageHeadData}
+                <p className="center">Loading...</p>
+            </Fragment>
+        );
     }
 
     // CLIENT-SIDE DATA FETCHING -- filter the data
@@ -46,9 +59,17 @@ const FilteredEventsPage = () => {
     const numYear = +filteredYear; // convert string to number
     const numMonth = +filteredMonth;
 
+    pageHeadData = (
+        <Head>
+            <title>Filtered Events</title>
+            <meta name='description' content={`All events for ${numMonth}/${numYear}`} />
+        </Head>
+    )
+
     if (isNaN(numYear) || isNaN(numMonth) || numYear > 2030 || numYear < 2021 || numMonth < 1 || numMonth > 12 || error) {
         return (
             <Fragment>
+                {pageHeadData}
                 <ErrorAlert>
                     <p>Invalid Filter. Please adjust your values!</p>
                 </ErrorAlert>
@@ -71,6 +92,7 @@ const FilteredEventsPage = () => {
     if(!filteredEvents || filteredEvents.length === 0) {
         return (
             <Fragment>
+                {pageHeadData}
                 <ErrorAlert>
                     <p>No events found for the chosen filter.</p>
                 </ErrorAlert>
@@ -85,6 +107,7 @@ const FilteredEventsPage = () => {
 
     return (
         <Fragment>
+            {pageHeadData}
             <ResultsTitle date={date} />
             <EventsList items={filteredEvents} />
         </Fragment>
