@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { getFeaturedEvents } from '../helpers/api-util';
 import EventsList from '../components/events/event-list.component';
+import NewsletterRegistration from '../components/input/newsletter-registration.component';
 
 const HomePage = (props) => {
     const featuredEvents = props.events;
@@ -16,6 +17,7 @@ const HomePage = (props) => {
                 />
             </Head>
             <h1 className='center' style={{ marginTop: '3rem' }}>Featured Events</h1>
+            <NewsletterRegistration />
             <EventsList items={featuredEvents} />
         </div>
     )
