@@ -8,7 +8,7 @@ const NotificationContext = createContext({
 });
 
 export const NotificationContextProvider = (props) => {
-  const [ activeNotification, setActiveNotification ] = useState();
+  const [ activeNotification, setActiveNotification ] = useState<any>();
 
   useEffect(() => {
     if (activeNotification && (activeNotification.status === 'success' || activeNotification.status === 'error')) {
