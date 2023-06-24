@@ -23,7 +23,7 @@ const handler = async (req, res) => {
             client.close();
             return;
         }
-        const newComment = { email, name, text, eventId };
+        const newComment: any = { email, name, text, eventId };
 
         // TRY INSERTING A NEW COMMENT
         try {

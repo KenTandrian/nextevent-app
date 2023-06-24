@@ -12,7 +12,7 @@ import ErrorAlert from "../../components/ui/error-alert.component";
 
 const FilteredEventsPage = () => {
   // CLIENT-SIDE DATA FETCHING -- load all events from Firebase
-  const [loadedEvents, setLoadedEvents] = useState();
+  const [loadedEvents, setLoadedEvents] = useState<any[]>();
 
   const { data, error } = useSWR(
     "https://nextjs-course-2-4169f-default-rtdb.firebaseio.com/events.json",
