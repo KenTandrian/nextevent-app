@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-eventsapp",
-  "version": "0.1.33",
+  "name": "next-events",
+  "version": "0.1.41",
   "private": true,
   "scripts": {
     "dev": "next dev",
