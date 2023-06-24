@@ -1,8 +1,7 @@
 import classes from './comment-list.module.css';
 
 const CommentList = (props) => {
-  const { items } = props;
-  if (!items) items = [];
+  const { items = [] } = props;
 
   return (
     <ul className={classes.comments}>
