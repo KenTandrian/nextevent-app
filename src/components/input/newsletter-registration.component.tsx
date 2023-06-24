@@ -5,10 +5,10 @@ import NotificationContext from "../../store/notification-context";
 // import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 
 const NewsletterRegistration = () => {
-  const enteredEmailRef = useRef();
+  const enteredEmailRef = useRef<HTMLInputElement>();
   const notificationCtx = useContext(NotificationContext);
 
-  const registrationHandler = (event) => {
+  const registrationHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // fetch user input (state or refs)
