@@ -1,7 +1,7 @@
 # NextEvents
 [![issues](https://img.shields.io/github/issues/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/issues)
-[![language](https://img.shields.io/github/languages/count/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/search?l=javascript)
-[![top-language](https://img.shields.io/github/languages/top/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/search?l=javascript)
+[![language](https://img.shields.io/github/languages/count/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/search?l=typescript)
+[![top-language](https://img.shields.io/github/languages/top/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/search?l=typescript)
 [![commit](https://img.shields.io/github/commit-activity/m/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/commits/main)
 [![last-commit](https://img.shields.io/github/last-commit/KenTandrian/nextevents-app)](https://github.com/KenTandrian/nextevents-app/commits/main)
 
