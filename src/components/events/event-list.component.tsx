@@ -3,7 +3,11 @@ import EventItem from "./event-item.component";
 
 import classes from './event-list.module.css';
 
-const EventsList = (props) => {
+type Props = {
+    items: IEvent[];
+}
+
+const EventsList = (props: Props) => {
     const { items } = props;
 
     return (
