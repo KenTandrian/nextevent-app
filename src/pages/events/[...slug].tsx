@@ -12,9 +12,9 @@ import ErrorAlert from "../../components/ui/error-alert.component";
 
 const FilteredEventsPage = () => {
   // CLIENT-SIDE DATA FETCHING -- load all events from Firebase
-  const [loadedEvents, setLoadedEvents] = useState<any[]>();
+  const [loadedEvents, setLoadedEvents] = useState<IEvent[]>();
 
-  const { data, error } = useSWR(
+  const { data, error } = useSWR<IEvent>(
     "https://nextjs-course-2-4169f-default-rtdb.firebaseio.com/events.json",
     (url) => fetch(url).then((res) => res.json())
   );
@@ -22,7 +22,7 @@ const FilteredEventsPage = () => {
 
   useEffect(() => {
     if (data) {
-      const events = [];
+      const events: IEvent[] = [];
       for (const key in data) {
         events.push({
           id: key,
