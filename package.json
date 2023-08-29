@@ -1,6 +1,6 @@
 {
   "name": "next-events",
-  "version": "0.1.57",
+  "version": "0.1.91",
   "private": true,
   "scripts": {
     "dev": "next dev",
