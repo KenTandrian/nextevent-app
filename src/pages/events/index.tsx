@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
@@ -7,11 +8,11 @@ import { getAllEvents } from "../../helpers/api-util";
 import EventsSearch from "../../components/events/events-search.component";
 import EventsList from "../../components/events/event-list.component";
 
-const AllEventsPage = (props) => {
+const AllEventsPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { events } = props;
   const router = useRouter();
 
-  const findEventHandler = (year, month) => {
+  const findEventHandler = (year: string, month: string) => {
     const fullPath = `/events/${year}/${month}`;
     router.push(fullPath);
   };

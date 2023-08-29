@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 // import { useRouter } from "next/router";
 
@@ -10,7 +11,7 @@ import ErrorAlert from "../../components/ui/error-alert.component";
 import Button from "../../components/ui/button.component";
 import Comment from '../../components/input/comments.component';
 
-const EventDetailPage = (props) => {
+const EventDetailPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     // const router = useRouter();
     // const eventId = router.query.eventId;
     // const event = getEventById(eventId);
@@ -53,7 +54,7 @@ const EventDetailPage = (props) => {
     )
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
     const eventId = context.params.eventId;
     const event = await getEventById(eventId);
 
