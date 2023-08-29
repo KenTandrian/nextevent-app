@@ -1,6 +1,10 @@
 import classes from './error-alert.module.css';
 
-function ErrorAlert(props) {
+type Props = {
+  children: JSX.Element;
+}
+
+function ErrorAlert(props: Props) {
   return <div className={classes.alert}>{props.children}</div>;
 }
 
