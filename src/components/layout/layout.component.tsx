@@ -4,7 +4,7 @@ import MainHeader from "./main-header.component";
 import Notification from "../ui/notification.component";
 import NotificationContext from "../../store/notification-context";
 
-const Layout = (props) => {
+const Layout = (props: { children: JSX.Element }) => {
     const notificationCtx = useContext(NotificationContext);
     const activeNotification = notificationCtx.notification;
 
