@@ -1,9 +1,10 @@
-// import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
+import { NextApiRequest, NextApiResponse } from "next";
 import { connectDatabase, insertDocument, getAllDocuments } from "../../../helpers/db-utils";
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const eventId = req.query.eventId;
-    let client;
+    let client: MongoClient;
 
     // CONNECT TO MONGODB
     try {
