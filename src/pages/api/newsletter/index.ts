@@ -1,7 +1,8 @@
-// import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
+import { NextApiHandler } from "next";
 import { connectDatabase, insertDocument } from "../../../helpers/db-utils";
 
-const handler = async (req, res) => {
+const handler: NextApiHandler = async (req, res) => {
     if(req.method === 'POST') {
         const registeredEmail = req.body.email;
 
@@ -9,7 +10,7 @@ const handler = async (req, res) => {
             res.status(422).json({ message: 'Invalid email address.' });
             return;
         }
-        let client;
+        let client: MongoClient;
 
         // TRY CONNECTING TO THE DATABASE // MONGODB CODES
         try {
