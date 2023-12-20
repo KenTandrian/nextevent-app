@@ -50,7 +50,7 @@ const handler: NextApiHandler = async (req, res) => {
         }
     }
 
-    client.close();
+    client?.close();
 }
 
 export default handler;
