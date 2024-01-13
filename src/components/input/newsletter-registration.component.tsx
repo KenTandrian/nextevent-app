@@ -67,6 +67,7 @@ const NewsletterRegistration = () => {
             placeholder="Your email"
             aria-label="Your email"
             ref={enteredEmailRef}
+            required
           />
           <button>Register</button>
         </div>
