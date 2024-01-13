@@ -8,15 +8,16 @@ type Props = {
 }
 
 const EventsSearch = (props: Props) => {
-    const yearInputRef = useRef<HTMLSelectElement>();
-    const monthInputRef = useRef<HTMLSelectElement>();
+    const yearInputRef = useRef<HTMLSelectElement>(null);
+    const monthInputRef = useRef<HTMLSelectElement>(null);
 
     const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const selectedYear = yearInputRef.current.value;
-        const selectedMonth = monthInputRef.current.value;
+        const selectedYear = yearInputRef.current?.value;
+        const selectedMonth = monthInputRef.current?.value;
 
+        if (!selectedYear || !selectedMonth) return;
         props.onSearch(selectedYear, selectedMonth);
     }
 

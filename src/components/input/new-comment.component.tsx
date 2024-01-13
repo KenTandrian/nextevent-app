@@ -4,16 +4,16 @@ import classes from './new-comment.module.css';
 const NewComment = (props) => {
   const [isInvalid, setIsInvalid] = useState(false);
 
-  const emailInputRef = useRef<HTMLInputElement>();
-  const nameInputRef = useRef<HTMLInputElement>();
-  const commentInputRef = useRef<HTMLTextAreaElement>();
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const commentInputRef = useRef<HTMLTextAreaElement>(null);
 
   function sendCommentHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const enteredEmail = emailInputRef.current.value;
-    const enteredName = nameInputRef.current.value;
-    const enteredComment = commentInputRef.current.value;
+    const enteredEmail = emailInputRef.current?.value;
+    const enteredName = nameInputRef.current?.value;
+    const enteredComment = commentInputRef.current?.value;
 
     if (
       !enteredEmail ||

@@ -42,7 +42,7 @@ const FilteredEventsPage = () => {
 
   // CLIENT-SIDE DATA FETCHING -- filter the data
   const router = useRouter();
-  const filterData = router.query.slug;
+  const filterData = router.query.slug ?? [];
 
   if (!loadedEvents) {
     return (

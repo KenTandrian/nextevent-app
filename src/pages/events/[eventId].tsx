@@ -55,7 +55,7 @@ const EventDetailPage = (props: InferGetStaticPropsType<typeof getStaticProps>) 
 }
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-    const eventId = context.params.eventId as string;
+    const eventId = context.params?.eventId as string;
     const event = await getEventById(eventId);
 
     return {

@@ -1,7 +1,7 @@
 import { Document, Filter, MongoClient, OptionalId, Sort } from "mongodb";
 
 export const connectDatabase = async () => {
-    const client = await MongoClient.connect(process.env.MONGODB_EVENTS_URI);
+    const client = await MongoClient.connect(process.env.MONGODB_EVENTS_URI!);
     return client;
 }
 

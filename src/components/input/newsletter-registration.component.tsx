@@ -5,14 +5,14 @@ import NotificationContext from "@/store/notification-context";
 // import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 
 const NewsletterRegistration = () => {
-  const enteredEmailRef = useRef<HTMLInputElement>();
+  const enteredEmailRef = useRef<HTMLInputElement>(null);
   const notificationCtx = useContext(NotificationContext);
 
   const registrationHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // fetch user input (state or refs)
-    const userEmail = enteredEmailRef.current.value;
+    const userEmail = enteredEmailRef.current?.value;
     const reqBody = { email: userEmail };
 
     notificationCtx.showNotification({
@@ -40,7 +40,7 @@ const NewsletterRegistration = () => {
         });
       })
       .then((data) => {
-        enteredEmailRef.current.value = "";
+        if (enteredEmailRef.current) enteredEmailRef.current.value = "";
         notificationCtx.showNotification({
           title: "Success!",
           message: "Successfully registered for newsletter!",

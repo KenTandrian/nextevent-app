@@ -2,13 +2,13 @@ import { createContext, useState, useEffect } from "react";
 
 // INITIAL CONTEXT
 const NotificationContext = createContext({
-  notification: null as INotification, // { title, message, status }
+  notification: null as INotification | null, // { title, message, status }
   showNotification: (notificationData: INotification) => {},
   hideNotification: () => {}
 });
 
 export const NotificationContextProvider = (props: { children: JSX.Element }) => {
-  const [ activeNotification, setActiveNotification ] = useState<INotification>();
+  const [ activeNotification, setActiveNotification ] = useState<INotification | null>(null);
 
   useEffect(() => {
     if (activeNotification && (activeNotification.status === 'success' || activeNotification.status === 'error')) {
