@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import Head from "next/head";
 
-// import { getFilteredEvents } from "../../helpers/api-util";
+// import { getFilteredEvents } from "@/helpers/api-util";
 
-import EventsList from "../../components/events/event-list.component";
-import ResultsTitle from "../../components/events/results-title.component";
-import Button from "../../components/ui/button.component";
-import ErrorAlert from "../../components/ui/error-alert.component";
+import EventsList from "@/components/events/event-list.component";
+import ResultsTitle from "@/components/events/results-title.component";
+import Button from "@/components/ui/button.component";
+import ErrorAlert from "@/components/ui/error-alert.component";
 
 const FilteredEventsPage = () => {
   // CLIENT-SIDE DATA FETCHING -- load all events from Firebase

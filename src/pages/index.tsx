@@ -1,9 +1,9 @@
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
-import { getFeaturedEvents } from '../helpers/api-util';
-import EventsList from '../components/events/event-list.component';
-import NewsletterRegistration from '../components/input/newsletter-registration.component';
+import { getFeaturedEvents } from '@/helpers/api-util';
+import EventsList from '@/components/events/event-list.component';
+import NewsletterRegistration from '@/components/input/newsletter-registration.component';
 
 const HomePage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const featuredEvents = props.events;

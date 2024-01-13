@@ -3,13 +3,13 @@ import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 // import { useRouter } from "next/router";
 
-import { getEventById, getFeaturedEvents } from "../../helpers/api-util";
-import EventSummary from '../../components/event-detail/event-summary.component';
-import EventLogistics from '../../components/event-detail/event-logistics.component';
-import EventContent from "../../components/event-detail/event-content.component";
-import ErrorAlert from "../../components/ui/error-alert.component";
-import Button from "../../components/ui/button.component";
-import Comment from '../../components/input/comments.component';
+import { getEventById, getFeaturedEvents } from "@/helpers/api-util";
+import EventSummary from '@/components/event-detail/event-summary.component';
+import EventLogistics from '@/components/event-detail/event-logistics.component';
+import EventContent from "@/components/event-detail/event-content.component";
+import ErrorAlert from "@/components/ui/error-alert.component";
+import Button from "@/components/ui/button.component";
+import Comment from '@/components/input/comments.component';
 
 const EventDetailPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     // const router = useRouter();

@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from "react";
 
 import MainHeader from "./main-header.component";
 import Notification from "../ui/notification.component";
-import NotificationContext from "../../store/notification-context";
+import NotificationContext from "@/store/notification-context";
 
 const Layout = (props: { children?: React.ReactNode }) => {
     const notificationCtx = useContext(NotificationContext);

@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 import { NextApiHandler } from "next";
-import { connectDatabase, insertDocument } from "../../../helpers/db-utils";
+import { connectDatabase, insertDocument } from "@/helpers/db-utils";
 
 const handler: NextApiHandler = async (req, res) => {
     if(req.method === 'POST') {

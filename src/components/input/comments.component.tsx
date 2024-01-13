@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import CommentList from "./comment-list.component";
 import NewComment from "./new-comment.component";
 import classes from "./comments.module.css";
-import NotificationContext from "../../store/notification-context";
+import NotificationContext from "@/store/notification-context";
 
 function Comments(props) {
   const { eventId } = props;

@@ -3,10 +3,10 @@ import { InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import { getAllEvents } from "../../helpers/api-util";
+import { getAllEvents } from "@/helpers/api-util";
 
-import EventsSearch from "../../components/events/events-search.component";
-import EventsList from "../../components/events/event-list.component";
+import EventsSearch from "@/components/events/events-search.component";
+import EventsList from "@/components/events/event-list.component";
 
 const AllEventsPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { events } = props;

@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
 
 import classes from "./newsletter-registration.module.css";
-import NotificationContext from "../../store/notification-context";
+import NotificationContext from "@/store/notification-context";
 // import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 
 const NewsletterRegistration = () => {
